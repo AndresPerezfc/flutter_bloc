@@ -31,7 +31,9 @@ class Pagina2Page extends StatelessWidget {
               child:
                   Text('Cambiar Edad', style: TextStyle(color: Colors.white)),
               color: Colors.blue,
-              onPressed: () {}),
+              onPressed: () {
+                BlocProvider.of<UsuarioBloc>(context).add(CambiarEdad(26));
+              }),
           MaterialButton(
               child: Text('Añadir Profesion',
                   style: TextStyle(color: Colors.white)),
